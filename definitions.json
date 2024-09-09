@@ -1,0 +1,128 @@
+{
+	"users": [
+		{
+			"name": "guest",
+			"password_hash": "9/1i+jKFRpbTRV1PtRnzFFYibT3cEpP92JeZ8YKGtflf4e/u",
+			"tags": ["administrator"]
+		}
+	],
+	"permissions":[
+		{
+			"user":"guest",
+			"vhost":"/",
+			"configure":".*",
+			"read":".*",
+			"write":".*"}
+	],
+  "vhosts": [
+    {
+      "name": "/"
+    }
+  ],
+  "exchanges": [
+    {
+      "name": "service-exc",
+      "vhost": "/",
+      "type": "direct",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    },
+    {
+      "name": "project-exc",
+      "vhost": "/",
+      "type": "direct",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    },
+    {
+      "name": "andamento-exc",
+      "vhost": "/",
+      "type": "direct",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    },
+	{
+      "name": "newproj-exc",
+      "vhost": "/",
+      "type": "direct",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    }
+  ],
+  "queues": [
+    {
+      "name": "service-queue",
+      "vhost": "/",
+      "durable": true,
+      "auto_delete": false,
+      "exclusive": false,
+      "arguments": {}
+    },
+    {
+      "name": "project-queue",
+      "vhost": "/",
+      "durable": true,
+      "auto_delete": false,
+      "exclusive": false,
+      "arguments": {}
+    },
+	{
+      "name": "newproj-queue",
+      "vhost": "/",
+      "durable": true,
+      "auto_delete": false,
+      "exclusive": false,
+      "arguments": {}
+    },
+    {
+      "name": "andamento-queue",
+      "vhost": "/",
+      "durable": true,
+      "auto_delete": false,
+      "exclusive": false,
+      "arguments": {}
+    }
+  ],
+  "bindings": [
+    {
+      "source": "service-exc",
+      "vhost": "/",
+      "destination": "service-queue",
+      "destination_type": "queue",
+      "routing_key": "service-rk",
+      "arguments": {}
+    },
+    {
+      "source": "project-exc",
+      "vhost": "/",
+      "destination": "project-queue",
+      "destination_type": "queue",
+      "routing_key": "project-rk",
+      "arguments": {}
+    },
+	{
+      "source": "newproj-exc",
+      "vhost": "/",
+      "destination": "newproj-queue",
+      "destination_type": "queue",
+      "routing_key": "newproj-rk",
+      "arguments": {}
+    },
+    {
+      "source": "andamento-exc",
+      "vhost": "/",
+      "destination": "andamento-queue",
+      "destination_type": "queue",
+      "routing_key": "andamento-rk",
+      "arguments": {}
+    }
+  ]
+}

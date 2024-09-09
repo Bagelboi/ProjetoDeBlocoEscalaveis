@@ -1,0 +1,15 @@
+[submodule "GatewayServicePB"]
+	path = GatewayServicePB
+	url = https://github.com/Bagelboi/GatewayServicePB
+[submodule "Microservico-Comentarios-PB"]
+	path = Microservico-Comentarios-PB
+	url = https://github.com/Bagelboi/Microservico-Comentarios-PB
+[submodule "project-java-micro"]
+	path = project-java-micro
+	url = https://github.com/DemarchiWorking/project-java-micro
+[submodule "service-java-micro"]
+	path = service-java-micro
+	url = https://github.com/DemarchiWorking/service-java-micro
+[submodule "EurekaServer"]
+	path = EurekaServer
+	url = https://github.com/DemarchiWorking/EurekaServer
