@@ -13,3 +13,6 @@
 [submodule "EurekaServer"]
 	path = EurekaServer
 	url = https://github.com/DemarchiWorking/EurekaServer
+[submodule "alunoservice"]
+	path = alunoservice
+	url = https://github.com/Bagelboi/alunoservice
